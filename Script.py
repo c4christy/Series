@@ -95,3 +95,6 @@ Added By - {}
 ID - <code>{}</code>
 Name - {}
 """
+ABOUT_TXT"""
+You Added your mind 
+"""
