@@ -50,6 +50,8 @@ async def is_subscribed(bot, query):
     else:
         if user.status != 'kicked':
             return True
+  
+   return False
 
 async def get_poster(query, bulk=False, id=False, file=None):
     if not id:
