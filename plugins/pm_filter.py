@@ -468,7 +468,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-            elif query.data == "owner":
+    elif query.data == "owner":
         buttons = [[
             InlineKeyboardButton('🄸🄽🅂🅃🄰🄶🅁🄰🄼', url='https://instagram.com/ask_movie_latest?igshid=YmMyMTA2M2Y='),
             InlineKeyboardButton('🅃🄴🄻🄴🄶🅁🄰🄼', url='https://t.me/c4christy')
