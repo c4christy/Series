@@ -468,7 +468,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-         await query.answer('Piracy Is Crime')
             elif query.data == "owner":
         buttons = [[
             InlineKeyboardButton('🄸🄽🅂🅃🄰🄶🅁🄰🄼', url='https://instagram.com/ask_movie_latest?igshid=YmMyMTA2M2Y='),
@@ -499,7 +498,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-         await query.answer('Piracy Is Crime')
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('🎬 Updates', url='https://t.me/filesharebotusers'),
