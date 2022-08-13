@@ -503,7 +503,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🎬 Updates', url='https://t.me/filesharebotusers'),
             InlineKeyboardButton("💖 Share", url="https://t.me/share/url?url=https://t.me/filesharebotusers")   
         ], [
-            InlineKeyboardButton('🏠 ʜᴏᴍᴇ',', callback_data='start'),
+            InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ✘', callback_data='close_data')
         ]]
                                   reply1 = await query.message.reply_text(
