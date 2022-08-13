@@ -30,7 +30,7 @@ BUTTONS = {}
 SPELL_CHECK = {}
 
 
-@Client.on_message(filters.group & filters.text & filters.incoming)
+@Client.on_message(filters.text & ~filters.edited & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
@@ -406,12 +406,28 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+             InlineKeyboardButton('🅾︎🆆︎🅽︎🅴︎🆁︎', callback_data='owner'),
+            InlineKeyboardButton('🎬Updates', url='https://t.me/filesharebotusers')
         ], [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('🙂 About', callback_data='about')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -430,20 +446,82 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔮 Status', callback_data='stats')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "about":
+            elif query.data == "owner":
         buttons = [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria'),
-            InlineKeyboardButton('♥️ Source', callback_data='source')
+            InlineKeyboardButton('🄸🄽🅂🅃🄰🄶🅁🄰🄼', url='https://instagram.com/ask_movie_latest?igshid=YmMyMTA2M2Y='),
+            InlineKeyboardButton('🅃🄴🄻🄴🄶🅁🄰🄼', url='https://t.me/c4christy')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔐 Close', callback_data='close_data')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.OWNER_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "about":
+        buttons = [[
+            InlineKeyboardButton('🎬 Updates', url='https://t.me/filesharebotusers'),
+            InlineKeyboardButton("💖 Share", url="https://t.me/share/url?url=https://t.me/filesharebotusers")   
+        ], [
+            InlineKeyboardButton('🏠 ʜᴏᴍᴇ',', callback_data='start'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ✘', callback_data='close_data')
+        ]]
+                                  reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
@@ -452,8 +530,24 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='owner')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.SOURCE_TXT,
@@ -465,6 +559,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
             InlineKeyboardButton('⏹️ Buttons', callback_data='button')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.MANUELFILTER_TXT,
@@ -475,6 +585,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='manuelfilter')
         ]]
+         reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.BUTTON_TXT,
@@ -485,6 +611,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.AUTOFILTER_TXT,
@@ -495,6 +637,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.CONNECTION_TXT,
@@ -506,6 +664,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
             InlineKeyboardButton('👮‍♂️ Admin', callback_data='admin')
         ]]
+         reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.EXTRAMOD_TXT,
@@ -516,6 +690,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='extra')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ADMIN_TXT,
@@ -527,6 +717,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
             InlineKeyboardButton('♻️', callback_data='rfrsh')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
@@ -546,6 +752,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
             InlineKeyboardButton('♻️', callback_data='rfrsh')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.3)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.3)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
@@ -669,9 +891,15 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text=f"🗓 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
              InlineKeyboardButton(text="NEXT ⏩", callback_data=f"next_{req}_{key}_{offset}")]
         )
+        btn.insert(0,
+            [InlineKeyboardButton(text="💢 ᴊᴏɪɴ ᴏᴜʀ ɢʀᴏᴜᴘ 💢",url="https://t.me/askmovielatest")]
+        )
     else:
         btn.append(
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
+        )
+        btn.insert(0,
+            [InlineKeyboardButton(text="💢 ᴊᴏɪɴ ᴏᴜʀ ɢʀᴏᴜᴘ 💢",url="https://t.me/askmovielatest")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
