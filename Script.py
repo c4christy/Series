@@ -6,6 +6,10 @@ class script(object):
     OWNER_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: BHAVANA
 ✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/filesharebotusers>AML UPDATES</a>"""
 
+    ABOUT_TXT = """<b>⌬ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
+⌬ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/FILESHAREBOTUSERS>AML UPDATES</a>
+</b>"""
+
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
